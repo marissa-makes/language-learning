@@ -1,0 +1,51 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "language-learning/language-card",
+	"title": "Language Card",
+	"category": "text",
+	"icon": "translation",
+	"description": "Flash card-like block for showcasing individual words.",
+	"keywords": [
+		"word",
+		"message",
+		"translation"
+	],
+	"version": "1.0.0",
+	"textdomain": "language-learning",
+	"attributes": {
+		"nativeWord": {
+			"type": "string",
+			"source": "html",
+			"selector": ".ll-native-word"
+		},
+		"translatedWord": {
+			"type": "string",
+			"source": "html",
+			"selector": ".ll-translated-word"
+		}
+	},
+	"supports": {
+		"align": true
+	},
+	"styles": [
+		{
+			"name": "default",
+			"label": "Default",
+			"isDefault": true
+		}
+	],
+	"example": {
+		"attributes": {
+			"nativeWord": "Dog",
+			"translatedWord": "Cāo"
+		}
+	},
+	"editorScript": "file:./index.js",
+	"viewScript": [
+		"file:./view.js",
+		"language-learning-card-script"
+	],
+	"editorStyle": "file:./index.css",
+	"style": "file:./style.css"
+}
